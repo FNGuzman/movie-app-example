@@ -3,9 +3,9 @@ import { MovieDBMovieResponse } from "@/infrastructure/interfaces/moviedb-respon
 import { MovieMapper } from "@/infrastructure/mappers/movie.mapper";
 import axios from 'axios';
 
-export const nowPlayingAction = async () => {
+export const upcomingMoviesAction = async () => {
     try {
-        const { data } = await movieApi.get<MovieDBMovieResponse>('/now_playing', {
+        const { data } = await movieApi.get<MovieDBMovieResponse>('/upcoming', {
             params: {
                 language: 'es-MX',
                 page: 1
